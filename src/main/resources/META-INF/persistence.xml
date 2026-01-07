@@ -21,7 +21,7 @@
         value="jdbc:mysql://automation-db.cbgukaqyca7d.ap-south-1.rds.amazonaws.com:3306/automation5?useSSL=false&amp;serverTimezone=UTC"/>
 
       <property name="javax.persistence.jdbc.user" value="admin"/>
-      <property name="javax.persistence.jdbc.password" value="YOUR_RDS_PASSWORD"/>
+      <property name="javax.persistence.jdbc.password" value="password"/>
 
       <!-- HIBERNATE -->
       <property name="hibernate.dialect"
