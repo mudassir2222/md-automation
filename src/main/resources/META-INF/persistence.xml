@@ -19,7 +19,7 @@
 
       <!-- AWS RDS CONNECTION -->
       <property name="javax.persistence.jdbc.url"
-        value="jdbc:mysql://db-automation.cbgukaqyca7d.ap-south-1.rds.amazonaws.com:3306/automation5?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC"/>
+        value="jdbc:mysql://automation5.cbgukaqyca7d.ap-south-1.rds.amazonaws.com:3306/automation5?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC"/>
 
       <property name="javax.persistence.jdbc.user" value="admin"/>
       <property name="javax.persistence.jdbc.password" value="password"/>
