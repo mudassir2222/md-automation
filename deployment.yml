@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: automation-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: automation
+  template:
+    metadata:
+      labels:
+        app: automation
+    spec:
+      containers:
+      - name: automation-container
+        image: shahnawaz312/java-app:latest
+        ports:
+        - containerPort: 9082
+        resources:
+          requests:
+            memory: "256Mi"  # Adjust the memory request
+            cpu: "500m"      # Adjust the CPU request
+          limits:
+            memory: "512Mi"  # Adjust the memory limit
+            cpu: "1"         # Adjust the CPU limit
+        env:
+          - name: SPRING_DATASOURCE_URL
+            value: jdbc:mysql://mysql:3306/automation5?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+          - name: SPRING_DATASOURCE_USERNAME
+            value: root
+          - name: SPRING_DATASOURCE_PASSWORD
+            value: root
